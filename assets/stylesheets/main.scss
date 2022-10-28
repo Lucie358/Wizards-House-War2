@@ -1,0 +1,92 @@
+@font-face {
+    font-family: 'Harry Potter';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Harry Potter'), url('assets/fonts/HARRP___.woff') format('woff');
+  }
+
+  h1 {
+    font-family: 'Harry Potter';
+  }
+
+  #particles-js canvas{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.v-card__actions {
+  justify-content: end;
+}
+
+.theme--dark.v-application {
+  background: transparent !important;
+}
+
+///// HP
+/// 
+
+$base-duration: 500ms;
+
+// Colors
+$color-1: #002127;
+$color-2: #3498db;
+$color-3: #2ecc71;
+
+// Breakpoints
+$sm: new-breakpoint(min-width 320px);
+$med: new-breakpoint(min-width 768px);
+$lg: new-breakpoint(min-width 1024px);
+
+*, *:before, *:after {
+  box-sizing: border-box;
+  outline: none;
+}
+.p-container {
+  background: rgb(0 0 0 / 41%);
+  padding: 60px 40px;
+  border-radius: 3px;
+  box-shadow: #505050a1 0px 0px 7px 0px;
+  min-height: 500px;
+}
+
+body {
+  background-image: url('../images/wallpaper.jpg');
+  background-position: left center;
+  background-size: cover;
+  background-attachment: fixed;
+  
+  &:before, &:after {
+    position: fixed;
+    content: '';
+    width: 100%;
+    height: 50%;
+    background-size: cover;
+    pointer-events: none;
+  }
+  
+  &:before {
+    top: 0;
+    left: 0;
+    background-image: url('https://github.com/joshuaward/codepen-images/blob/master/clouds-left.png?raw=true');
+    animation: clouds1 60s infinite linear;
+  }
+  
+  &:after {
+    bottom: 0;
+    left: 0;
+    background-image: url('https://github.com/joshuaward/codepen-images/blob/master/clouds-right.png?raw=true');
+    animation: clouds2 130s infinite linear;
+  }
+  
+  @keyframes clouds1 {
+    to { background-position: -100%; }
+  }
+  
+  @keyframes clouds2 {
+    to { background-position: 130%; }
+  }
+}
+    
